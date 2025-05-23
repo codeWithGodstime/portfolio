@@ -79,7 +79,7 @@ export default function Home() {
             <span className="text-emerald-400">const</span> <span className="text-blue-400">developer</span> = {"{"}
             <br />
             &nbsp;&nbsp;passion:{" "}
-            <span className="text-amber-300">"I'm passionate about"</span>,
+            <span className="text-amber-300">"I take great pride crafting software systems that are reliable and efficient."</span>,
             <br />
             &nbsp;&nbsp;specialties: <span className="text-amber-300">"API Development, Automation"</span>
             <br />
@@ -166,7 +166,8 @@ export default function Home() {
               size="icon"
               className="rounded-full bg-zinc-900 border-zinc-800 hover:bg-zinc-800 hover:text-emerald-400"
             >
-              <Github className="h-5 w-5" />
+
+              <a href="https://github.com/codeWithGodstime" target="_blank"><Github className="h-5 w-5" /></a>
               <span className="sr-only">GitHub</span>
             </Button>
             <Button
@@ -174,7 +175,7 @@ export default function Home() {
               size="icon"
               className="rounded-full bg-zinc-900 border-zinc-800 hover:bg-zinc-800 hover:text-blue-400"
             >
-              <Twitter className="h-5 w-5" />
+              <a href="https://x.com/mi6ixx" target="_blank"><Twitter className="h-5 w-5" /></a>
               <span className="sr-only">Twitter</span>
             </Button>
             <Button
@@ -182,7 +183,7 @@ export default function Home() {
               size="icon"
               className="rounded-full bg-zinc-900 border-zinc-800 hover:bg-zinc-800 hover:text-blue-500"
             >
-              <Linkedin className="h-5 w-5" />
+              <a href="https://www.linkedin.com/in/mgboawaji/" target="_blank"><Linkedin className="h-5 w-5" /></a>
               <span className="sr-only">LinkedIn</span>
             </Button>
             <Button
@@ -190,7 +191,7 @@ export default function Home() {
               size="icon"
               className="rounded-full bg-zinc-900 border-zinc-800 hover:bg-zinc-800 hover:text-amber-400"
             >
-              <Mail className="h-5 w-5" />
+              <a href="mailto:specialgodstym@gmail.com"><Mail className="h-5 w-5" /></a>
               <span className="sr-only">Email</span>
             </Button>
           </div>
