@@ -30,16 +30,16 @@ const projects = [
       "live": "https://gymx.onrender.com/",
     }
   },
-  {
-    "title": "MeetMesh",
-    "image": "/meetmesh.png",
-    "description": "Built a fullstack geo-location social media platform to connect user with similar interests in the same environment. Used scikit-learn library to create a recommendation for each user. Use geo-django and geopy to calculate distance between each user to use for recommendation.",
-    "tools": ["Django", "Geopy", "ReactJS", "Scikit-learn"],
-    "links": {
-      "repo": "https://github.com/codeWithGodstime/meetmesh",
-      "live": null,
-    }
-  },
+  // {
+  //   "title": "MeetMesh",
+  //   "image": "/meetmesh.png",
+  //   "description": "Built a fullstack geo-location social media platform to connect user with similar interests in the same environment. Used scikit-learn library to create a recommendation for each user. Use geo-django and geopy to calculate distance between each user to use for recommendation.",
+  //   "tools": ["Django", "Geopy", "ReactJS", "Scikit-learn"],
+  //   "links": {
+  //     "repo": "https://github.com/codeWithGodstime/meetmesh",
+  //     "live": null,
+  //   }
+  // },
   {
     "title": "In-Motion",
     "image": "/inmotion.png",
@@ -50,26 +50,26 @@ const projects = [
       "live": "https://partnersatinmotion.com.ng/",
     }
   },
-  {
-    "title": "DataCleaner",
-    "image": "",
-    "description": "DataCleaner is a fast and user-friendly app that cleans messy datasets using pandas—removing duplicates and standardizing column names to make data analysis effortless.",
-    "tools": ["Django", "Pandas"],
-    "links": {
-      "repo": "https://github.com/codeWithGodstime/dataCleaner",
-      "live": null,
-    }
-  },
-  {
-    "title": "FZBot",
-    "image": "/fzbot.png",
-    "description": "FZBot is a CLI tool that automates downloading of tv series from FZmovies. ",
-    "tools": ["Python", "Beautifulsoup", "Asyncio", "Aiohttp"],
-    "links": {
-      "repo": "https://github.com/codeWithGodstime/fzbot",
-      "live": null,
-    }
-  },
+  // {
+  //   "title": "DataCleaner",
+  //   "image": "",
+  //   "description": "DataCleaner is a fast and user-friendly app that cleans messy datasets using pandas—removing duplicates and standardizing column names to make data analysis effortless.",
+  //   "tools": ["Django", "Pandas"],
+  //   "links": {
+  //     "repo": "https://github.com/codeWithGodstime/dataCleaner",
+  //     "live": null,
+  //   }
+  // },
+  // {
+  //   "title": "FZBot",
+  //   "image": "/fzbot.png",
+  //   "description": "FZBot is a CLI tool that automates downloading of tv series from FZmovies. ",
+  //   "tools": ["Python", "Beautifulsoup", "Asyncio", "Aiohttp"],
+  //   "links": {
+  //     "repo": "https://github.com/codeWithGodstime/fzbot",
+  //     "live": null,
+  //   }
+  // },
 
 ]
 
@@ -139,7 +139,7 @@ export default function Home() {
           <h2 className="text-xl font-bold font-mono flex items-center">
             <span className="text-emerald-400 mr-2">{">"}</span> Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {
               projects.map((project, index) => {
                 return <Card key={index} className="bg-zinc-900 border-zinc-800">
