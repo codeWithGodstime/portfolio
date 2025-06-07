@@ -12,10 +12,10 @@ const navItems = [
     path: "#about",
     name: "About",
   },
-  {
-    path: "#experience",
-    name: "Experience",
-  },
+//   {
+//     path: "#experience",
+//     name: "Experience",
+//   },
   {
     path: "#skills",
     name: "Skills",

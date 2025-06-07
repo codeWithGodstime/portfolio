@@ -43,9 +43,24 @@
       ],
       "screenshots": [
         {
-            "url": "/gymx.png",
+            "url": "/gymx/gymx.png",
             "alt": "gymx",
             "caption": "gymx landing page"
+        },
+        {
+            "url": "/gymx/dashboard.png",
+            "alt": "gymx",
+            "caption": "gymx dashboard"
+        },
+        {
+            "url": "/gymx/login.png",
+            "alt": "gymx",
+            "caption": "gymx login"
+        },
+        {
+            "url": "/gymx/reports.png",
+            "alt": "gymx",
+            "caption": "gymx reports"
         }
       ],
       "links": {
@@ -150,7 +165,19 @@
             "description": "Games can be resumed if connection drops."
           }
         ],
-        "screenshots": [],
+        "screenshots": [
+            {
+                "url": "/tikky/create_game.png",
+                "alt": "tikky",
+                "caption": "create game"
+            },
+            {
+                "url": "/tikky/game.png",
+                "alt": "tikky",
+                "caption": "game"
+            }
+        
+        ],
         "links": {
           "demo": "https://tikky.vercel.app",
           "github": "https://github.com/codeWithGodstime/tikky"
@@ -246,7 +273,7 @@
         "slug": "school-saas",
         "title": "Multi-tenant SaaS School Management System",
         "timeline": "May 2025 - Ongoing",
-        "overview": "A customizable school management SaaS allowing each school to register, customize landing pages, manage users, and handle payments independently.",
+        "overview": "A customizable school management SaaS allowing each school to register, customize landing pages, manage users, and handle payments.",
         "problemStatement": "Most school systems are not customizable or multi-tenant. Schools need branded control and isolated environments.",
         "techStack": [
           { "name": "Django", "category": "backend" },
@@ -267,10 +294,6 @@
           {
             "title": "Subscription Plans",
             "description": "Built-in support for free and paid plans via Stripe."
-          },
-          {
-            "title": "User Management",
-            "description": "Admin panel for teachers, students, and parents."
           }
         ],
         "screenshots": [],

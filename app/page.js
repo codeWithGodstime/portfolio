@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Twitter, Linkedin, Mail, ExternalLink } from "lucide-react"
+import { Github, Twitter, Linkedin, Mail, ExternalLink, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -21,6 +21,18 @@ const staggerContainer = {
   animate: {
     transition: {
       staggerChildren: 0.1
+    }
+  }
+}
+
+const bounceAnimation = {
+  initial: { y: 0 },
+  animate: {
+    y: [0, -8, 0],
+    transition: {
+      duration: 1.5,
+      repeat: Infinity,
+      ease: "easeInOut"
     }
   }
 }
@@ -60,7 +72,7 @@ export default function Home() {
           initial="initial"
           animate="animate"
           variants={staggerContainer}
-          className="space-y-4 min-h-screen flex flex-col justify-center bg-[url('/background.png')] bg-cover bg-center bg-no-repeat px-6 md:px-40"
+          className="space-y-4 min-h-screen flex flex-col justify-center bg-[url('/background.png')] bg-cover bg-center bg-no-repeat px-6 md:px-40 relative"
         >
           <motion.div variants={fadeInUp} className="flex items-center gap-4">
             {/* <div className="h-20 w-20 rounded-full bg-gradient-to-br from-emerald-500 to-blue-600 flex items-center justify-center text-white text-2xl font-mono overflow-hidden">
@@ -74,6 +86,18 @@ export default function Home() {
                 Full-Stack Developer | Problem Solver | Tech Enthusiast
               </p>
             </div>
+          </motion.div>
+          
+          {/* Scroll Indicator */}
+          <motion.div 
+            variants={bounceAnimation}
+            className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
+            onClick={() => {
+              document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            <span className="text-sm font-mono text-primary-foreground">Scroll</span>
+            <ChevronDown className="w-6 h-6 text-primary-foreground" />
           </motion.div>
         </motion.section>
 
@@ -96,7 +120,7 @@ export default function Home() {
           </motion.div>
         </motion.section>
 
-        {/* Experience Section */}
+        {/* Experience Section
         <motion.section 
           id="experience"
           initial="initial"
@@ -109,9 +133,9 @@ export default function Home() {
             <span className="text-emerald-400 mr-2">{">"}</span> Experience
           </motion.h2>
           <motion.div variants={fadeInUp} className="text-zinc-300">
-            {/* Add your experience content here */}
+            {/* Add your experience content here 
           </motion.div>
-        </motion.section>
+        </motion.section> */}
 
         {/* Skills Section */}
         <motion.section 
@@ -189,6 +213,17 @@ export default function Home() {
                 </Card>
               </motion.div>
             ))}
+          </motion.div>
+          <motion.div 
+            variants={fadeInUp}
+            className="flex justify-center pt-8"
+          >
+            <Button asChild size="lg" className="gap-2">
+              <Link href="/projects">
+                View All Projects
+                <ExternalLink size={16} />
+              </Link>
+            </Button>
           </motion.div>
         </motion.section>
 
