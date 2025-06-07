@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator"
 import Image from "next/image"
 import Link from "next/link"
 import { useNavigation } from '@/context/navigation-context'
+import projects from '@/data/projects.json'
 
 const fadeInUp = {
   initial: { y: 20, opacity: 0 },
@@ -36,28 +37,14 @@ const skills = [
   "Agile/Scrum"
 ]
 
-const projects = [
-  {
-    "title": "Gym Management System (SaaS)",
-    "image": "/gymx.png",
-    "description": "A multi-tenant gym management platform that allows gym owners to manage their members, staff, subscriptions, and attendance under separate tenant environments. Built with Django, django-tenants, and PostgreSQL, the system supports isolated data per gym, custom landing pages for each tenant, and role-based dashboards for admins and staff.",
-    "tools": ["Django", "django-tenants", "PostgreSQ"],
-    "links": {
-      "repo": "https://github.com/codeWithGodstime/gymX",
-      "live": "https://gymx.onrender.com/",
-    }
-  },
-  {
-    "title": "In-Motion",
-    "image": "/inmotion.png",
-    "description": "In-motion is an organization real estate web application that helps the firm to keep track of the companies workers and the sales and also handles tracking of percentage earnings for the employees. Include Analytics and Admin dashboard",
-    "tools": ["Django", "DRF", "Shadcn", "NextJS"],
-    "links": {
-      "repo": "https://github.com/codeWithGodstime/meetmesh",
-      "live": "https://partnersatinmotion.com.ng/",
-    }
-  },
-]
+console.log(projects[0].screenshots[0])
+
+const someProjects = projects.slice(0, 2).map((project) => ({
+  ...project,
+  image: project.screenshots.length > 0 
+    ? project.screenshots[0] 
+    : { url: '/placeholder.png', alt: project.title }
+}))
 
 export default function Home() {
   const { isOpen, isMobile } = useNavigation()
@@ -167,31 +154,31 @@ export default function Home() {
             <span className="text-emerald-400 mr-2">{">"}</span> Projects
           </motion.h2>
           <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
+            {someProjects.map((project, index) => (
               <motion.div
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -5 }}
               >
                 <Card className="bg-zinc-900 border-zinc-800">
-                  <Image src={project.image} width={600} height={300} alt="" className="object-cover" />
+                  <Image src={project.image.url} width={600} height={300} alt={project.image.alt} className="object-cover w-full h-full" />
                   <CardContent className="p-6 space-y-4">
                     <h3 className="text-xl font-display font-bold text-zinc-100">{project.title}</h3>
                     <p className="text-zinc-300 font-sans leading-relaxed">
-                      {project.description}
+                      {project.overview}
                     </p>
                     <div className="flex gap-3 mt-4">
-                      {project.links['live'] && (
+                      {project.links['demo'] && (
                         <Button variant="outline" size="sm" className="gap-2" asChild>
-                          <a target="_blank" href={project.links['live']}>
+                          <a target="_blank" href={project.links['demo']}>
                             <ExternalLink size={14} />
                             Live Link
                           </a>
                         </Button>
                       )}
-                      {project.links['repo'] && (
+                      {project.links['github'] && (
                         <Button variant="outline" size="sm" className="gap-2" asChild>
-                          <a target="_blank" href={project.links['repo']}>
+                          <a target="_blank" href={project.links['github']}>
                             <ExternalLink size={14} />
                             View Github
                           </a>

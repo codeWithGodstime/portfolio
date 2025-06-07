@@ -1,0 +1,282 @@
+[
+    {
+      "slug": "gymx-app",
+      "title": "GymX - Multi-Tenant Gym Management System",
+      "timeline": "June 2025 - Ongoing",
+      "overview": "A multi-tenant SaaS for gyms to manage memberships, classes, and trainers, each with a customizable dashboard and branding.",
+      "problemStatement": "Most gym management systems are monolithic and expensive for small or medium-sized gyms. GymX offers isolated environments with custom features per gym at scale.",
+      "techStack": [
+        {
+          "name": "Django",
+          "category": "backend"
+        },
+        {
+          "name": "django-tenants",
+          "category": "backend"
+        },
+        {
+          "name": "PostgreSQL",
+          "category": "database"
+        },
+        {
+          "name": "Tailwind CSS",
+          "category": "frontend"
+        },
+        {
+          "name": "Stripe",
+          "category": "payments"
+        }
+      ],
+      "features": [
+        {
+          "title": "Tenant-Aware Gym Dashboards",
+          "description": "Each gym has its own login, dashboard, and branded frontend."
+        },
+        {
+          "title": "Membership and Class Scheduling",
+          "description": "Manage members, trainers, and class bookings easily."
+        },
+        {
+          "title": "Role-Based Access",
+          "description": "Different access for admins, trainers, and members."
+        }
+      ],
+      "screenshots": [
+        {
+            "url": "/gymx.png",
+            "alt": "gymx",
+            "caption": "gymx landing page"
+        }
+      ],
+      "links": {
+        "demo": "https://gymx.onrender.com/",
+        "github": "https://github.com/codeWithGodstime/gymX"
+      }
+    },
+        {
+      "slug": "cinetracker",
+      "title": "CineTracker - Movie/TV Watchlist & Reminder App",
+      "timeline": "March 2025",
+      "overview": "An app that lets users track movies and shows they want to watch, set reminders for releases, and get availability updates across platforms.",
+      "problemStatement": "Movie fans often forget release dates or where to stream titles. CineTracker centralizes tracking and notifies users across devices.",
+      "techStack": [
+        {
+          "name": "HTML",
+          "category": "frontend"
+        },
+        {
+          "name": "CSS",
+          "category": "frontend"
+        },
+        {
+          "name": "Django",
+          "category": "backend"
+        },
+        {
+          "name": "PostgreSQL",
+          "category": "database"
+        },
+        {
+          "name": "TMDb API",
+          "category": "api"
+        }
+      ],
+      "features": [
+        {
+          "title": "Cross-Platform Tracker",
+          "description": "Track movie/show status and release dates."
+        },
+        {
+          "title": "Notifications and Alerts",
+          "description": "Reminders sent before new episodes or movie drops."
+        },
+        {
+          "title": "Streaming Availability",
+          "description": "Know where to watch across Netflix, Prime, etc."
+        }
+      ],
+      "screenshots": [
+        {
+            "url": "/cinetrack/my_list.png",
+            "alt": "cinetracker",
+            "caption": "my list"
+        },
+        {
+            "url": "/cinetrack/search.png",
+            "alt": "cinetracker",
+            "caption": "search"
+        },
+        {
+            "url": "/cinetrack/watchlist.png",
+            "alt": "cinetracker",
+            "caption": "watchlist"
+        },
+        {
+            "url": "/cinetrack/analytics.png",
+            "alt": "cinetracker",
+            "caption": "analytics"
+        }
+      ],
+      "links": {
+        "demo": "https://chosen-willette-stallion-11771a56.koyeb.app/",
+        "github": "https://github.com/codeWithGodstime/cinetracker"
+      }
+    },
+    {
+        "slug": "real-time-tic-tac-toe",
+        "title": "Tikky - Real-time Tic-Tac-Toe Game",
+        "timeline": "May 2025",
+        "overview": "A multiplayer web-based Tic-Tac-Toe game that allows players to challenge each other in real-time using WebSockets.",
+        "problemStatement": "Turn-based games often require real-time interactivity for a smooth player experience. Traditional implementations using polling are inefficient and not scalable.",
+        "techStack": [
+          { "name": "React", "category": "frontend" },
+          { "name": "TailwindCSS", "category": "frontend" },
+          { "name": "Django", "category": "backend" },
+          { "name": "Django Channels", "category": "realtime" },
+          { "name": "Redis", "category": "realtime" },
+          { "name": "WebSockets", "category": "realtime" }
+        ],
+        "features": [
+          {
+            "title": "Real-time Gameplay",
+            "description": "Instant updates for both players using WebSockets."
+          },
+          {
+            "title": "Player Matching",
+            "description": "Auto-match players or invite friends via unique game links."
+          },
+          {
+            "title": "Game State Persistence",
+            "description": "Games can be resumed if connection drops."
+          }
+        ],
+        "screenshots": [],
+        "links": {
+          "demo": "https://tikky.vercel.app",
+          "github": "https://github.com/codeWithGodstime/tikky"
+        }
+      },
+      {
+        "slug": "fzbot",
+        "title": "fzbot - CLI Movie Downloader",
+        "timeline": "May 2025",
+        "overview": "A fast and async CLI bot to search and download movies and TV shows from the internet using asyncio and aiohttp.",
+        "problemStatement": "Many download bots are slow, sequential, or require manual searching. This bot simplifies the process with an automated CLI.",
+        "techStack": [
+          { "name": "Python", "category": "backend" },
+          { "name": "asyncio", "category": "backend" },
+          { "name": "aiohttp", "category": "networking" },
+          { "name": "tqdm", "category": "utility" }
+        ],
+        "features": [
+          {
+            "title": "Fast Downloads",
+            "description": "Downloads chunks of files in parallel."
+          },
+          {
+            "title": "Smart Search",
+            "description": "Finds download sources automatically."
+          },
+          {
+            "title": "Progress Visualization",
+            "description": "CLI shows download progress with tqdm."
+          }
+        ],
+        "screenshots": [
+            {
+                "url": "/fzbot.png",
+                "alt": "fzbot",
+                "caption": "fzbot"
+            }
+        ],
+        "links": {
+          "demo": "",
+          "github": "https://github.com/codeWithGodstime/fzbot"
+        }
+      },
+    {
+      "slug": "cinetracker",
+      "title": "CineTracker - Movie/TV Watchlist & Reminder App",
+      "timeline": "March 2025",
+      "overview": "An app that lets users track movies and shows they want to watch, set reminders for releases, and get availability updates across platforms.",
+      "problemStatement": "Movie fans often forget release dates or where to stream titles. CineTracker centralizes tracking and notifies users across devices.",
+      "techStack": [
+        {
+          "name": "HTML",
+          "category": "frontend"
+        },
+        {
+          "name": "CSS",
+          "category": "frontend"
+        },
+        {
+          "name": "Django",
+          "category": "backend"
+        },
+        {
+          "name": "PostgreSQL",
+          "category": "database"
+        },
+        {
+          "name": "TMDb API",
+          "category": "api"
+        }
+      ],
+      "features": [
+        {
+          "title": "Cross-Platform Tracker",
+          "description": "Track movie/show status and release dates."
+        },
+        {
+          "title": "Notifications and Alerts",
+          "description": "Reminders sent before new episodes or movie drops."
+        },
+        {
+          "title": "Streaming Availability",
+          "description": "Know where to watch across Netflix, Prime, etc."
+        }
+      ],
+      "screenshots": [],
+      "links": {
+        "demo": "https://chosen-willette-stallion-11771a56.koyeb.app/",
+        "github": "https://github.com/codeWithGodstime/cinetracker"
+      }
+    },
+    {
+        "slug": "school-saas",
+        "title": "Multi-tenant SaaS School Management System",
+        "timeline": "May 2025 - Ongoing",
+        "overview": "A customizable school management SaaS allowing each school to register, customize landing pages, manage users, and handle payments independently.",
+        "problemStatement": "Most school systems are not customizable or multi-tenant. Schools need branded control and isolated environments.",
+        "techStack": [
+          { "name": "Django", "category": "backend" },
+          { "name": "django-tenants", "category": "backend" },
+          { "name": "Tailwind CSS", "category": "frontend" },
+          { "name": "PostgreSQL", "category": "database" },
+          { "name": "Stripe", "category": "payments" }
+        ],
+        "features": [
+          {
+            "title": "Tenant Isolation",
+            "description": "Each school has its own schema and database isolation."
+          },
+          {
+            "title": "Custom Landing Page",
+            "description": "Schools can customize their frontend from the admin dashboard."
+          },
+          {
+            "title": "Subscription Plans",
+            "description": "Built-in support for free and paid plans via Stripe."
+          },
+          {
+            "title": "User Management",
+            "description": "Admin panel for teachers, students, and parents."
+          }
+        ],
+        "screenshots": [],
+        "links": {
+          "demo": "https://campus-connect-8lgb.onrender.com/",
+          "github": "https://github.com/codeWithGodstime/school-saas"
+        }
+      }
+  ]
